@@ -9,6 +9,13 @@ class Athlete:
         return (sorted(set([sanitize(t) for t in self.Times]))[0:3])
 
 
+    def add_time(self, one_time):
+        self.Time.append(one_time)
+
+
+    def add_times(self, more_times):
+        self.Time.append(more_times)
+    
 def get_coach_data(filename):
     try:
         with open(filename) as f:
