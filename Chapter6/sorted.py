@@ -23,13 +23,14 @@ def get_coach_data(filename):
         print("File Error: " + str(err))
         return(None)
 
-sarah = get_coach_data("sarah2.txt")
-
+'''
 (sarah_name, sarah_dob) = sarah.pop(0), sarah.pop(0)
 
 print(sarah_name + "'s fastest times are: " + 
       str(sorted(set([sanitize(each_t) for each_t in sarah]))[0:3]) )
+'''
 
+sarah = get_coach_data("sarah2.txt")
 
 sarah_data = {}
 sarah_data['Name'] = sarah.pop(0)
