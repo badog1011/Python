@@ -10,11 +10,11 @@ class Athlete:
 
 
     def add_time(self, one_time):
-        self.Time.append(one_time)
+        self.Times.append(one_time)
 
 
     def add_times(self, more_times):
-        self.Time.append(more_times)
+        self.Times.extend(more_times)
     
 def get_coach_data(filename):
     try:
@@ -41,7 +41,12 @@ def sanitize(time_string):
 
 
 james = get_coach_data('james2.txt')
+'''Add one time to James'''
+james.add_time('1.0')
+
 julie = get_coach_data('julie2.txt')
+'''Add more time to julie'''
+julie.add_times(['1.0', '1.1', '1.2'])
 
 print(james.Name + "'s fastes times are: " + str(james.top3()))
 print(julie.Name + "'s fastes times are: " + str(julie.top3()))
